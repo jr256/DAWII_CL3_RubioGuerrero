@@ -1,1 +1,17 @@
-<p>venta-almacen works!</p>
+<div>
+    <h2>Venta Almacen</h2>
+    <form (submit)="calcularPrecio()">
+      <label for="precioUnitario">Precio Unitario:</label>
+      <input type="number" id="precioUnitario" name="precioUnitario" [(ngModel)]="precioUnitario" required>
+  
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" name="cantidad" [(ngModel)]="cantidad" required>
+  
+      <button type="submit">Calcular Precio</button>
+    </form>
+  
+    <div *ngIf="montoPago !== null">
+      <p>Monto a pagar: {{ montoPago | currency:'PEN':'symbol':'1.2-2' }}</p>
+    </div>
+  </div>
+  

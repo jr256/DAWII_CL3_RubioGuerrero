@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,16 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     CalculoSalarioComponent,
     ConsumoApiComponent,
     DashboardComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
+    FormsModule,
+    
     RouterModule.forRoot([
       {path: 'dashboard', component: DashboardComponent,
         children: [

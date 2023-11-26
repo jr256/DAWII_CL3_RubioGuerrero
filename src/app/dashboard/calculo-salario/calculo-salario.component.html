@@ -1,1 +1,15 @@
-<p>calculo-salario works!</p>
+<div>
+    <h2>Calculadora de Salario Semanal</h2>
+    <form (ngSubmit)="calcularSalario()">
+      <label for="horasTrabajadas">Horas Trabajadas:</label>
+      <input type="number" id="horasTrabajadas" name="horasTrabajadas" [(ngModel)]="horasTrabajadas" required>
+
+      <button type="submit">Calcular</button>
+    </form>
+  
+    <div *ngIf="salarioCalculado !== null">
+      <p *ngIf="horasTrabajadas <= 40">Salario semanal: {{ horasTrabajadas * 16 | currency:'PEN':'symbol':'1.2-2' }}</p>
+      <p *ngIf="horasTrabajadas > 40">Salario semanal: {{ (40 * 16 + (horasTrabajadas - 40) * 20) | currency:'USD':'symbol':'1.2-2' }}</p>
+    </div>
+  </div>
+  
