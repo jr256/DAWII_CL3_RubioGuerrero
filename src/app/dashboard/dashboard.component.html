@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>CL3</span>
+      <span class="example-spacer"></span>
+      <button mat-button (click)="onNavigateToVentaPage()">Venta-Almacen</button>
+      <button mat-button (click)="onNavigateToSalarioPage()" >Calculo-Salario</button>
+      <button mat-button (click)="onNavigateToApiPage()">Consumo-Api</button>      
+    </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>
